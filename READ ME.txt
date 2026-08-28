@@ -1,78 +1,9 @@
-# Hybrid CNN-GCN Framework for Brain Tumour MRI Classification
-
-## Overview
-
-This repository contains the implementation of three Graph Convolutional Network (GCN)-based models developed for multi-class brain tumour MRI classification.
-
-The objective of this project is to investigate how deep feature extraction, graph representation learning, and graph convolutional networks can improve brain tumour classification performance. The framework integrates Convolutional Neural Networks (CNNs), TensorFlow/scikit-learn-based feature processing, multiple graph construction strategies, and GCN classifiers.
-
-The proposed approaches include:
-
-### 1. Hybrid CNN-GCN Model
-
-The hybrid model combines CNN-based deep feature extraction with graph representation learning. CNN features are extracted from MRI images and processed using TensorFlow and scikit-learn. The extracted feature representations are then transformed into graph structures using different graph construction techniques, followed by a Graph Convolutional Network (GCN) for final classification.
-
-The graph construction strategies investigated include:
-
-- k-Nearest Neighbour (kNN) graph
-- Radial Basis Function (RBF) graph
-- ε-Cosine graph
-- Domain-specific graph
-
----
-
-### 2. GCN with Conventional Feature Extraction
-
-This model evaluates the effectiveness of GCNs without CNN-based feature extraction.
-
-Features are generated using TensorFlow/scikit-learn-based preprocessing techniques. Multiple graph construction approaches are applied to represent relationships between MRI samples. The generated graphs are then passed to the GCN classifier for brain tumour classification.
-
----
-
-### 3. GCN without Graph Construction
-
-This model investigates the contribution of graph learning by removing explicit graph-building methods.
-
-CNN-based feature extraction is combined with TensorFlow/scikit-learn processing, and the resulting feature representations are directly evaluated using a GCN-based classification framework.
-
----
-
-## Overall Pipeline
-
-The general workflow consists of:
-
-1. MRI image preprocessing
-2. Feature extraction
-3. Feature normalization and dimensionality reduction
-4. Graph construction (where applicable)
-5. Graph Convolutional Network training
-6. Multi-class brain tumour classification
-7. Performance evaluation
-
----
-
-## Brain Tumour Classes
-
-The models classify four MRI categories:
-
-- Glioma
-- Meningioma
-- Pituitary tumour
-- No tumour
-
----
-
-## Technologies Used
-
-- Python
-- TensorFlow / Keras
-- scikit-learn
-- Spektral Graph Neural Network Library
-- NumPy
-- SciPy
-- OpenCV
-- Matplotlib
-
----
-
-## Repository Structure
+tensorflow==2.18.1
+keras
+numpy
+pandas
+scikit-learn
+scipy
+matplotlib
+opencv-python
+spektral
